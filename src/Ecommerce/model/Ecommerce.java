@@ -1,9 +1,10 @@
 package Ecommerce.model;
 
 public abstract class Ecommerce {
-	private int idProduto, estoque;
-	private String produto, tipo;
-	private float preco;
+	protected int idProduto, estoque;
+	protected String produto;
+	protected String tipo;
+	protected float preco;
 	
 	
 public Ecommerce(int idProduto,  String produto, float preco, int estoque, String tipo) {

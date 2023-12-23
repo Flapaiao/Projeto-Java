@@ -2,31 +2,18 @@ package Ecommerce.model;
 
 public class Virtual extends Ecommerce{
 	
-	private String cuidados;
 
-	public Virtual(int idProduto, String produto, float preco, int estoque, String tipo, String cuidados) {
+	public Virtual(int idProduto, String produto, float preco, int estoque, String tipo) {
 		super(idProduto, produto, preco, estoque, tipo);
-		this.cuidados = cuidados;
 	}
 
-      @Override
+	@Override
       public void visualizar() {
-		
-		String tipo = "";
-		
-		switch(this.cuidados) {
-		case "Crescimento dos fios":
-			tipo = "Cuidados para o crescimento saudável dos seus cachos!";
-		break;
-		case "Fortificação dos fios":
-			tipo = "Cuidados para fortificar seus cachos!";
-		break;
-		}
-		
-		System.out.println("\n\n***********************************************************");
-		System.out.println("Produtos disponíveis: ");
-		System.out.println("***********************************************************");
-		System.out.println("Produto: Ebook de " + this.cuidados + " \n" + tipo);
+		System.out.println("Digite o id do produto: " + idProduto);
+		System.out.println("Digite o nome do produto: " + produto);
+		System.out.println("Digite o preço do produto: " + preco);
+		System.out.println("Digite o estoque do produto: " + estoque);
+		System.out.println("Digite o tipo do produto: " + tipo + "\n");
 
 	}
 	

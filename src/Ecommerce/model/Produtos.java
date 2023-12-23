@@ -1,40 +1,18 @@
 package Ecommerce.model;
 
 public class Produtos extends Ecommerce{
-	
-	private int tamanho;
 
-	public Produtos(int idProduto, String produto, float preco, int estoque, String tipo, int tamanho) {
+	public Produtos(int idProduto, String produto, float preco, int estoque, String tipo) {
 		super(idProduto, produto, preco, estoque, tipo);
-		this.tamanho = tamanho;
-	}
-
-	public int getTamanho() {
-		return tamanho;
-	}
-
-	public void setTamanho(int tamanho) {
-		this.tamanho = tamanho;
 	}
 	
 	@Override
-	public void visualizar() {
-		
-		int tipo = 0;
-		
-		switch(this.tamanho) {
-		case 1:
-			tipo = 300;
-		break;
-		case 2:
-			tipo = 500;
-		break;
-		}
-		
-		System.out.println("\n\n***********************************************************");
-		System.out.println("Tamanhos disponíveis: ");
-		System.out.println("***********************************************************");
-		System.out.println("Produto do tamanho: " + tipo + "g");
+    public void visualizar() {
+		System.out.println("Digite o id do produto: " + idProduto);
+		System.out.println("Digite o nome do produto: " + produto);
+		System.out.println("Digite o preço do produto: " + preco);
+		System.out.println("Digite o estoque do produto: " + estoque);
+		System.out.println("Digite o tipo do produto: " + tipo + "\n");
 
 	}
 
